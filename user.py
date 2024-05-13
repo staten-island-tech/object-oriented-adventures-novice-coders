@@ -8,3 +8,20 @@ class user:
         return f"{self.name}, {self.health}, {self.lvl}, {self.xp}"
     name = input("Enter in a name please: ")
 
+
+
+
+
+
+
+
+"""     def lvl_up(iRange):
+        xp = 100
+        lvl = 1
+        for i in range(iRange):
+              if xp == 100:
+                    lvl += 1
+                    print("You leveled up! Your level is now: " + lvl)   """
+
+
+
