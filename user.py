@@ -1,27 +1,21 @@
-class user:
+class player:
     def __init__(self, name, health, lvl, xp):
         self.name = name
-        self.health = health
-        self.lvl = lvl
-        self.xp = xp
+        self.health = int(health)
+        self.lvl = int(lvl)
+        self.xp = int(xp)
     def __str__(self):
         return f"{self.name}, {self.health}, {self.lvl}, {self.xp}"
-    name = input("Enter in a name please: ")
+    health = 100
+    xp = 0
+    lvl = 1
+    #add function for gaining xp after killing monsters, and updating xp value
+    def lvl_up(self):
+        if xp == 100:
+             lvl += 1
+             print("You leveled up! Your level is now: " + lvl)
+             xp = xp - 100
 
 
 
-
-
-
-
-
-"""     def lvl_up(iRange):
-        xp = 100
-        lvl = 1
-        for i in range(iRange):
-              if xp == 100:
-                    lvl += 1
-                    print("You leveled up! Your level is now: " + lvl)   """
-
-
-
+"""     name = input("Enter in a name please: ") """
