@@ -19,6 +19,7 @@ def health_dmg():
     if choice== "punch":
         res=health-punch.dealt
         print (res)
+        health.update (res)
     if choice == "slash":
         res=health-slash.dealt
         print (res)
@@ -31,6 +32,7 @@ def health_dmg():
 
 health_dmg()
 
+print (health)
 """ again=input ("attack again? Y/N  ")
 if again == "Y":
     health_dmg ()
@@ -38,5 +40,6 @@ else :
     print ("end")
  """
 
-
+#-------------------------------------------------------------
+#more specific
 
