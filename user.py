@@ -6,16 +6,24 @@ class player:
         self.xp = int(xp)
     def __str__(self):
         return f"{self.name}, {self.health}, {self.lvl}, {self.xp}"
-    health = 100
+    
+
+    health = 300
     xp = 0
     lvl = 1
-    #add function for gaining xp after killing monsters, and updating xp value
+    #add function+++++++++++++++++ for gaining xp after killing monsters, and updating xp value
     def lvl_up(self):
         if xp == 100:
              lvl += 1
              print("You leveled up! Your level is now: " + lvl)
              xp = xp - 100
+             health = 300
 
 
 
-"""     name = input("Enter in a name please: ") """
+
+    name = input("Enter in a name please: ") 
+
+
+
+
