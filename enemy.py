@@ -52,19 +52,19 @@ dungeon_lords = dungeon_lord (140, 5, 50, 300, 5, 2, 0.8, 15)
 #calculation of total dmgs below
 
 totaldmgslime=slimes.damage+slimes.poison
-print (totaldmgslime)
+#print (totaldmgslime)
 #20 dmg
 
 totaldmggoblin=(goblins.damage+goblins.poison)*2
-print (totaldmggoblin)
+#print (totaldmggoblin)
 #60 dmg
 
 totaldmgorc=(orcs.damage+orcs.poison)*2
-print (totaldmgorc)
+#print (totaldmgorc)
 #80 dmg
 
 totaldmgDL= (dungeon_lords.damage + dungeon_lords.poison)*2
-print (totaldmgDL)
+#print (totaldmgDL)
 #110 dmg
 
 
