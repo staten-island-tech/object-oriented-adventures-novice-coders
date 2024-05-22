@@ -2,6 +2,7 @@
 # notes: THIS DOESN'T INCLUDE WHEN THE ENEMIES ARE ATTACKING USER
 #THIS IS ONLY ATTACKING ENEMY AND ATTACKING AGAIN RIGHT AFTER
 #RIGHT BEFORE RUNNING ANOTHER ATTACK INCLUDE SOMETHING ABOUT ENEMY ATTACKING USER
+
 from enemy import shrubs, slimes, goblins, orcs, dungeon_lords
 
 class attack_types:
@@ -164,7 +165,9 @@ def again_dungeon_lords():
     if dungeon_lords.hp<=0:
         print ("victory")
     else: 
-        print ("enemy still has: "); print (dungeon_lords.hp)
+        print ("OH NO, DUNGEON LORD HEALED 5HP")
+        boost=dungeon_lords.hp+5
+        print ("enemy still has: "); print (boost)
         choice == input ("what attack to u want to use to attack again? punch, slash, push, spells   ")
         attacking_dungeon_lord()
 
@@ -172,4 +175,3 @@ def again_dungeon_lords():
         
 
 
-attacking_orc()
