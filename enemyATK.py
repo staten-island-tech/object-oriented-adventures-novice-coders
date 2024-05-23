@@ -12,14 +12,15 @@ def slime_attacking():
     print ("you've been attacked")
     print ("You have:")
     print (attacked)
-    again ()
+    #again ()
 
+''''
 def again():
     miss=("did you miss? Y/N")
     if miss =="Y":
         print ("oh no, you were attacked again")
         slime_attacking()
-
+'''
 
 def goblin_attacking():
     attacked=health-totaldmggoblin
