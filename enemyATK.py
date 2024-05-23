@@ -1,18 +1,25 @@
 from enemy import totaldmgslime, totaldmggoblin, totaldmgorc, totaldmgDL
+from player import user 
 
-health=500
+#doesn't remember the updated hp
+
+#place holder health
+health = user.health
 
 def slime_attacking():
     attacked= health-totaldmgslime
-    health =attacked
+    health = attacked
     print ("you've been attacked")
     print ("You have:")
     print (attacked)
-    slime_attacking ()
+    again ()
 
-def again_attcked():
-        print ("youve been attacked again")
+def again():
+    miss=("did you miss? Y/N")
+    if miss =="Y":
+        print ("oh no, you were attacked again")
         slime_attacking()
+
 
 def goblin_attacking():
     attacked=health-totaldmggoblin
