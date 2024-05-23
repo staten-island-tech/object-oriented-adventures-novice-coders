@@ -13,6 +13,10 @@ def attack():
 attack()
 
 
+
+
+
+#find way to print out math problem
 """ while monster hp != 0:
 	answer = int(input(“What is the answer? “))
 	if answer == x1 + x2:
