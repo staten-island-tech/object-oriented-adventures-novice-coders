@@ -8,7 +8,7 @@ class player:
         return f"{self.name}, {self.health}, {self.lvl}, {self.xp}"
     
 
-    health = 300
+    health = 500
     xp = 0
     lvl = 1
     #add function for gaining xp after killing monsters, and updating xp value
@@ -17,9 +17,9 @@ class player:
              lvl += 1
              print("You leveled up! Your level is now: " + lvl)
              xp = xp - 100
-             health = 300
+             health = 500
     def dead(self):
-        health = 300
+        health = 500
         if health == 0:
             print("you died")
     
