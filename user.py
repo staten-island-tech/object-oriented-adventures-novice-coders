@@ -13,10 +13,12 @@ class player:
     lvl = 1
     #add function for gaining xp after killing monsters, and updating xp value
     def lvl_up(self):
-        if xp == 100:
+        if xp >= 100:
              lvl += 1
              print("You leveled up! Your level is now: " + lvl)
              xp = xp - 100
+             #xtra xp = reward xp - (xp value from before extra xp was added)
+             #xp = xp + xtra xp
              health = 500
     def dead(self):
         health = 500

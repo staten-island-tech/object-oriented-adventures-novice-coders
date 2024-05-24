@@ -5,13 +5,13 @@ x2 = random.randint(1,12)
 def attack():
 
     answer = int(input("What is the answer? "))
-    while answer != x1+x2:
+    
+    if answer != x1+x2:
         print("whoops you got it wrong")
         print(x1+x2)
     else: print("yippee you got it")
 
 attack()
-
 
 
 
@@ -23,5 +23,6 @@ attack()
 		print(“yippee you got it”)
         monster hp = monster hp - attack dmg
 	elif answer != x1 + x2:
-print(“whoops you got it wrong”)
+        print(“whoops you got it wrong”)
+        print(x1+x2)
 else: print(“woohoo you killed the monster”) """
