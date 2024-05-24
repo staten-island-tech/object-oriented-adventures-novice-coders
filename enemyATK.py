@@ -7,19 +7,27 @@ from player import user
 health = user.health
 
 def slime_attacking():
-    attacked= health-totaldmgslime
-    health = attacked
+    attacked= user.health-totaldmgslime #place holder name
+    user.health = attacked #place holder
     print ("you've been attacked")
     print ("You have:")
     print (attacked)
     #again ()
+'''
 
-''''
+    attacked2= user.health-totaldmgslime
+    user.health = attacked2
+    print ("you've been attacked")
+    print ("You have:")
+    print (attacked2)  
+
+'''
+
+'''
 def again():
     miss=("did you miss? Y/N")
     if miss =="Y":
         print ("oh no, you were attacked again")
-        slime_attacking()
 '''
 
 def goblin_attacking():
