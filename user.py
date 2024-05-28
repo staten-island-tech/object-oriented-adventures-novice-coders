@@ -15,10 +15,8 @@ class player:
     def lvl_up(self):
         if xp >= 100:
              lvl += 1
-             print("You leveled up! Your level is now: " + lvl)
+             print("You leveled up! Your level is now: " + lvl) #TypeError: can only concatenate str (not "int") to str
              xp = xp - 100
-             #xtra xp = reward xp - (xp value from before extra xp was added)
-             #xp = xp + xtra xp
              health = 500
     def dead(self):
         health = 500
@@ -28,7 +26,7 @@ class player:
 
 
 
-    name = input("Enter in a name please: ") 
+    name = input("Enter in a name please: ")
 
 
 
