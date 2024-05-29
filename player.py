@@ -16,8 +16,7 @@ user=player(name, 500, 1, 0)
 def lvl_up ():
     if user.xp>=100:
         up=user.lvl+1
-        print ("you lvled up to:")
-        print (up)
+        print ("you lvled up to: "+ str (up))
         user.xp=user.xp-100
         user.health=500
 
@@ -35,9 +34,6 @@ def dead():
 
 #print (user.health)
 
-
-
-
 """ health = 300
 xp = 0
 lvl = 1
@@ -48,10 +44,5 @@ def lvl_up(self):
         print("You leveled up! Your level is now: " + lvl)
         xp = xp - 100
         health = 300
-
-
-    
-
-
 
     name = input("Enter in a name please: ")  """

@@ -10,8 +10,7 @@ def slime_attacking():
     attacked= user.health-totaldmgslime #place holder name
     user.health = attacked #place holder
     print ("you've been attacked")
-    print ("You have:")
-    print (attacked)
+    print ("You have: "+ str (attacked) + " HP")
     #again ()
 '''
 
@@ -33,19 +32,16 @@ def again():
 def goblin_attacking():
     attacked=health-totaldmggoblin
     print ("you've been attacked")
-    print ("You have:")
-    print (attacked)
+    print ("You have: "+ str (attacked) + " HP")
 
 def orc_attacking():
     attacked=health-totaldmgorc
     print ("you've been attacked")
-    print ("You have:")
-    print (attacked)
+    print ("You have: "+ str (attacked) + " HP")
 
 def DL_attacking():
     attacked=health-totaldmgDL
     print ("you've been attacked")
-    print ("You have:")
-    print (attacked)
+    print ("You have: "+ str (attacked) + " HP")
 
 slime_attacking ()

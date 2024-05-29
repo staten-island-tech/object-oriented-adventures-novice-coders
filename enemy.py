@@ -8,6 +8,10 @@ class shrub:
          self. damage = damage
          self.drop=drop
 
+class blob:
+     def __init__ (self, hp):
+          self.hp = hp
+
 class slime (shrub):
      def __init__ (self, hp, level, damage, drop, poison):
           super().__init__(hp, level, damage, drop)
@@ -40,6 +44,7 @@ class dungeon_lord (orc):
 #2.0
 #format: hp, lvl, dmg, drop, poison, 2x, 20% less hit, heal
 
+blobs= blob (15)
 shrubs = shrub (30, 1, 10, 80)
 slimes = slime (50, 2, 15, 110, 5)
 goblins = goblin (70, 3, 25, 140, 5, 2)

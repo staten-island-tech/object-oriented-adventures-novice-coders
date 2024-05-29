@@ -4,7 +4,7 @@
 #THIS IS ONLY ATTACKING ENEMY AND ATTACKING AGAIN RIGHT AFTER
 #RIGHT BEFORE RUNNING ANOTHER ATTACK INCLUDE SOMETHING ABOUT ENEMY ATTACKING USER
 
-from enemy import shrubs, slimes, goblins, orcs, dungeon_lords
+from enemy import blobs, shrubs, slimes, goblins, orcs, dungeon_lords
 
 class attack_types:
     def __init__ (self, name, dealt):
@@ -19,6 +19,36 @@ spells=attack_types("spell cast", 40)
 #--------------------------------------------------------
 choice=input ("what attack to u want to use? punch, slash, push, spells   ")
 #-------------------------------------------------------------
+#BLOB ONLY
+
+def attacking_blob():
+    health= blobs.hp
+    if choice== "punch":
+        res=health-punch.dealt
+        blobs.hp=res
+        again_blobs ()
+    elif choice == "slash":
+        res=health-slash.dealt
+        blobs.hp=res
+        again_blobs ()
+    elif choice == "push":
+        res=health-push.dealt
+        blobs.hp=res
+        again_blobs ()
+    elif choice == "spells":
+        res=health-spells.dealt
+        blobs.hp=res
+        again_blobs ()
+    
+def again_blobs():
+        if blobs.hp<=0:
+            print ("victory")
+        else: 
+            print ("enemy still has: "); print (blobs.hp)
+            choice==input ("what attack to u want to use to attack again? punch, slash, push, spells   ")
+            attacking_blob()
+
+#-------------------------------------------------------------
 #SHURB ONLY
 
 def attacking_shrub():
@@ -27,15 +57,15 @@ def attacking_shrub():
         res=health-punch.dealt
         shrubs.hp=res
         again_shrubs ()
-    if choice == "slash":
+    elif choice == "slash":
         res=health-slash.dealt
         shrubs.hp=res
         again_shrubs ()
-    if choice == "push":
+    elif choice == "push":
         res=health-push.dealt
         shrubs.hp=res
         again_shrubs ()
-    if choice == "spells":
+    elif choice == "spells":
         res=health-spells.dealt
         shrubs.hp=res
         again_shrubs ()
@@ -58,15 +88,15 @@ def attacking_slime():
         res=health-punch.dealt
         slimes.hp=res
         again_slimes ()
-    if choice == "slash":
+    elif choice == "slash":
         res=health-slash.dealt
         slimes.hp=res
         again_slimes ()
-    if choice == "push":
+    elif choice == "push":
         res=health-push.dealt
         slimes.hp=res
         again_slimes ()
-    if choice == "spells":
+    elif choice == "spells":
         res=health-spells.dealt
         slimes.hp=res
         again_slimes ()
@@ -74,6 +104,7 @@ def attacking_slime():
 def again_slimes():
         if slimes.hp<=0:
             print ("victory")
+
         else: 
             print ("enemy still has: "); print (slimes.hp)
             choice ==input ("what attack to u want to use to attack again? punch, slash, push, spells   ")
@@ -89,15 +120,15 @@ def attacking_goblin():
         res=health-punch.dealt
         goblins.hp=res
         again_goblins ()
-    if choice == "slash":
+    elif choice == "slash":
         res=health-slash.dealt
         goblins.hp=res
         again_goblins ()
-    if choice == "push":
+    elif choice == "push":
         res=health-push.dealt
         goblins.hp=res
         again_goblins ()
-    if choice == "spells":
+    elif choice == "spells":
         res=health-spells.dealt
         goblins.hp=res
         again_goblins ()
@@ -120,15 +151,15 @@ def attacking_orc():
         res=health-(punch.dealt)*.8
         orcs.hp=res
         again_orcs ()
-    if choice == "slash":
+    elif choice == "slash":
         res=health-(slash.dealt)*.8
         orcs.hp=res
         again_orcs ()
-    if choice == "push":
+    elif choice == "push":
         res=health-(push.dealt)*.8
         orcs.hp=res
         again_orcs ()
-    if choice == "spells":
+    elif choice == "spells":
         res=health-(spells.dealt)*.8
         orcs.hp=res
         again_orcs ()
@@ -150,15 +181,15 @@ def attacking_dungeon_lord():
         res=health-(punch.dealt)*.8
         dungeon_lords.hp=res
         again_dungeon_lords ()
-    if choice == "slash":
+    elif choice == "slash":
         res=health-(slash.dealt)*.8
         dungeon_lords.hp=res
         again_dungeon_lords ()
-    if choice == "push":
+    elif choice == "push":
         res=health-(push.dealt)*.8
         dungeon_lords.hp=res
         again_dungeon_lords ()
-    if choice == "spells":
+    elif choice == "spells":
         res=health-(spells.dealt)*.8
         dungeon_lords.hp=res
         again_dungeon_lords ()
@@ -173,6 +204,3 @@ def again_dungeon_lords():
         attacking_dungeon_lord()
 
 #attacking_dungeon_lord()
-        
-
-
