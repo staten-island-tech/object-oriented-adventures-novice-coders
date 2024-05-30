@@ -26,23 +26,3 @@ def dead():
     if user.health == 0:
         print("you died")
 
-
-
-
-
-
-
-#print (user.health)
-
-""" health = 300
-xp = 0
-lvl = 1
-#add function for gaining xp after killing monsters, and updating xp value
-def lvl_up(self):
-    if xp == 100:
-        lvl += 1
-        print("You leveled up! Your level is now: " + lvl)
-        xp = xp - 100
-        health = 300
-
-    name = input("Enter in a name please: ")  """

@@ -1,5 +1,5 @@
-#Characteristics of each enemy (NOT INCLUDING UPDATING HP PER ATTACK)
-# HP was used for health instead of xp
+#Characteristics of each enemy
+
 
 class shrub:
     def __init__ (self, hp, level, damage, drop):
