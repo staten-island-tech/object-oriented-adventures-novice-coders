@@ -20,36 +20,36 @@ choice=input ("what attack to u want to use? punch, slash, push, spells   ")
 def equations():
     if choice == "punch":
         print(str(x1) + " + " + str(x2) + " = ? ")
-        answer = int(input("What is the answer? "))
+        answer = int(input("What is the answer? (Warning: failure to attack results in no damage dealt, solve the problem correctly to attack successfully) "))
         if answer != x1 + x2:
-            print("whoops you got it wrong")
+            print("You try to punch your opponent, only to miss your swing and stumble, giving the monster the opportunity to attack. You just failed to do kindergarten math :/")
             print("Correct answer: " + str(x1+x2))
         else:
-            print("yippee you got it")
+            print("Congratulations you can do basic math; you bring your arm back and drive it straight into the monster's gut, as it howls in pain.")
             #subtract dmg dealt from monster hp
     elif choice == "slash":
         print(str(x1) + " * " + str(x2) + " = ? ")
-        answer = int(input("What is the answer? "))
+        answer = int(input("What is the answer? (Warning: failure to attack results in no damage dealt, solve the problem correctly to attack successfully) "))
         if answer != x1 * x2:
-            print("whoops you got it wrong")
+            print("You pull your rusty dagger you found on the side of a street and bring it in a downward slash, but your grip on the weapon wasn't strong enough, and it slips before you can even hit your opponent. Looks like you need to work on your skills, in math and combat")
             print("Correct answer: " + str(x1 * x2))
         else:
-            print("yippee you got it")
+            print("Yay you can multiply; using your blade, you swiftly drag it down the monster's back, doing a decent amount of damage.")
             #subtract dmg dealt from monster hp
     elif choice == "push":
         print(str(x1) + "-" + str(x2) + " = ? ")
-        answer = int(input("What is the answer? "))
+        answer = int(input("What is the answer? (Warning: failure to attack results in no damage dealt, solve the problem correctly to attack successfully) "))
         if answer != x1 - x2:
-            print("whoops you got it wrong")
+            print("Really? :/ I hope you know the monster is probably laughing at your terrible skill. Deciding to just wing it, you bring your arms out and rush forward to push your enemy back, but the universe seems to hate you as you somehow manage to trip on nothing and fall flat on your face in front of the monster as it prepares to retaliate.")
             print("Correct answer: " + str(x1 - x2))
         else:
-            print("yippee you got it")
+            print("Good to know you can at least subtract; an intrusive thought enters your head and before you know it, you have tackled the monster and pushed it back knocking it against the wall and giving it quite the concussion, if monsters can get concussions.")
             #subtract dmg dealt from monster hp
     elif choice == "spells":
         print(str(x1) + "+" + str(x2) + "*" + str(x3) + " = ? ")
-        answer = int(input("What is the answer? "))
+        answer = int(input("What is the answer? (Warning: failure to attack results in no damage dealt, solve the problem correctly to attack successfully) "))
         if answer == x1 + x2 * x3:
-            print("yippee you got it")
+            print("yayy you solved a multi-operation problem :D ; you mutter some mumbo-jumbo from memory that you've heard that one crazy hobo wizard chant in his hut, and miraculously, it seems to do something as the monster stops,looking confused, and suddenly hits itself with an incredible amount of force. ")
             #subtract dmg dealt from monster hp
         elif answer != (x1 + x2) * x3 and x1 + x2 * x3:
             print("whoops you got it wrong")
