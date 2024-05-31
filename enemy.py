@@ -1,6 +1,4 @@
 #Characteristics of each enemy
-
-
 class shrub:
     def __init__ (self, hp, level, damage, drop):
          self.hp = hp

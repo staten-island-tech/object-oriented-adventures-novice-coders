@@ -1,11 +1,10 @@
 #basic characteristics 
 # notes: THIS DOESN'T INCLUDE WHEN THE ENEMIES ARE ATTACKING USER
-# doen't include drop (include after victory)
 #THIS IS ONLY ATTACKING ENEMY AND ATTACKING AGAIN RIGHT AFTER
 #RIGHT BEFORE RUNNING ANOTHER ATTACK INCLUDE SOMETHING ABOUT ENEMY ATTACKING USER
 
 from enemy import blobs, shrubs, slimes, goblins, orcs, dungeon_lords
-
+from user import players
 class attack_types:
     def __init__ (self, name, dealt):
         self.name=name
@@ -44,7 +43,7 @@ def again_blobs():
         if blobs.hp<=0:
             print ("victory")
         else: 
-            print ("enemy still has: "); print (blobs.hp)
+            print ("enemy still has: " + str (blobs.hp))
             choice==input ("what attack to u want to use to attack again? punch, slash, push, spells   ")
             attacking_blob()
 
@@ -73,8 +72,9 @@ def attacking_shrub():
 def again_shrubs():
         if shrubs.hp<=0:
             print ("victory")
+            players.xp=players.xp+shrubs.drop
         else: 
-            print ("enemy still has: "); print (shrubs.hp)
+            print ("enemy still has: " + str (shrubs.hp))
             choice==input ("what attack to u want to use to attack again? punch, slash, push, spells   ")
             attacking_shrub()
 
@@ -104,9 +104,10 @@ def attacking_slime():
 def again_slimes():
         if slimes.hp<=0:
             print ("victory")
+            players.xp=players.xp+slimes.drop
 
         else: 
-            print ("enemy still has: "); print (slimes.hp)
+            print ("enemy still has: " + str(slimes.hp))
             choice ==input ("what attack to u want to use to attack again? punch, slash, push, spells   ")
             attacking_slime()
 
@@ -136,8 +137,9 @@ def attacking_goblin():
 def again_goblins():
         if goblins.hp<=0:
             print ("victory")
+            players.xp=players.xp+goblins.drop
         else: 
-            print ("enemy still has: "); print (goblins.hp)
+            print ("enemy still has: " +str (goblins.hp))
             choice == input ("what attack to u want to use to attack again? punch, slash, push, spells   ")
             attacking_goblin()
 
@@ -166,8 +168,9 @@ def attacking_orc():
 def again_orcs():
     if orcs.hp<=0:
         print ("victory")
+        players.xp=players.xp+orcs.drop
     else: 
-        print ("enemy still has: "); print (orcs.hp)
+        print ("enemy still has: " + str (orcs.hp))
         choice == input ("what attack to u want to use to attack again? punch, slash, push, spells   ")
         attacking_orc()
 
@@ -196,10 +199,11 @@ def attacking_dungeon_lord():
 def again_dungeon_lords():
     if dungeon_lords.hp<=0:
         print ("victory")
+        players.xp=players.xp+dungeon_lords.drop
     else: 
         print ("OH NO, DUNGEON LORD HEALED 5HP")
         boost=dungeon_lords.hp+5
-        print ("enemy still has: "); print (boost)
+        print ("enemy still has: " + str(boost))
         choice == input ("what attack to u want to use to attack again? punch, slash, push, spells   ")
         attacking_dungeon_lord()
 
