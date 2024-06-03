@@ -1,5 +1,4 @@
 from enemy import totaldmgslime, totaldmggoblin, totaldmgorc, totaldmgDL
-from player import user 
 from user import players
 
 #doesn't remember the updated hp
