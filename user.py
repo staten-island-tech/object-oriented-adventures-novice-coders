@@ -24,7 +24,7 @@ class player:
             print("you died")
 
 
-    name = input("Enter in a name please: ")
+name = input("Enter in a name please: ")
 players = player(name, 500, 1, 0)
 
 
