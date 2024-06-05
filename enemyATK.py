@@ -1,4 +1,4 @@
-from enemy import totaldmgslime, totaldmggoblin, totaldmgorc, totaldmgDL
+from enemy import totaldmgslime, totaldmgshrub, totaldmggoblin, totaldmgorc, totaldmgDL
 from user import players
 
 #doesn't remember the updated hp
@@ -9,6 +9,12 @@ health = players.health
 def slime_attacking():
     attacked= players.health-totaldmgslime #place holder name
     players.health = attacked #place holder
+    print ("you've been attacked")
+    print ("You have: "+ str (attacked) + " HP")
+
+def shrub_attacking():
+    attacked=players.health-totaldmgshrub
+    players.health = attacked
     print ("you've been attacked")
     print ("You have: "+ str (attacked) + " HP")
 

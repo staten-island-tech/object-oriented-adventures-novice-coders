@@ -53,6 +53,7 @@ dungeon_lords = dungeon_lord (140, 5, 50, 300, 5, 2, 0.8, 15)
 #print (dungeon_lords.heal) #print specific value
 #-------------------------------------------------
 #calculation of total dmgs below
+totaldmgshrub=shrubs.damage
 
 totaldmgslime=slimes.damage+slimes.poison
 #print (totaldmgslime)

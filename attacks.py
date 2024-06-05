@@ -209,9 +209,6 @@ def again_dungeon_lords():
         attacking_dungeon_lord()
 
 
-
-
-
 #-------------------------------------------------
 import random
 
@@ -223,7 +220,7 @@ x3 = random.randint(1,12)
 
 def equations_shrub():
     #while shrubs.hp, blobs.hp, slimes.hp, goblins.hp, orcs.hp, dungeon_lords.hp != 0:
-        choice=input ("what attack to u want to use? punch, slash, push, spells   ")
+
         if choice == "punch":
             print(str(x1) + " + " + str(x2) + " = ? ")
             answer = int(input("What is the answer? (Warning: failure to attack results in no damage dealt, solve the problem correctly to attack successfully) "))
@@ -264,4 +261,7 @@ def equations_shrub():
                 print("You remember snooping through your mother's magic scrolls and finding a powerful spell that shoots lightning at your target, you quickly mutter the incantation, yet nothing happened. Oh no! You forgot to draw your wand first, like how does one even forget the order of things? (bruh imagine forgetting PEMDAS)")
                 print("Correct answer: " + str(x1 + x2 * x3))
 
-attacking_shrub()
+#equations_shrub ()
+
+#choice=input ("what attack to u want to use? punch, slash, push, spells   ")
+#attacking_shrub()
