@@ -1,16 +1,42 @@
-from attacks import attacking_shrub, again_shrubs, equations_shrub, main
-from enemyATK import shrub_attacking
-from enemy import shrubs
+from attacks import main_blob, main_shrub, main_slime, main_goblin, main_orc, main_DL
+from enemy import shrubs, slimes, orcs, goblins, dungeon_lords
 
 
-def cheking ():
-    main()
+#battle with blob
+def battle_with_blob():
+    main_blob()
+
+# battling shrub code - drop is included
+def battle_with_shrub ():
     while shrubs.hp > 0:
-        print ("this is shrubs hp" , shrubs.hp)
-        print("running")
-        shrub_attacking()
-        main()
-    
-    print ("cheking victory")
+        main_shrub()
+    print ("HURRAY, LETS KEEP MOVING")
 
-cheking()
+# battling with slimes - drop is included
+def battle_with_slime ():
+    while slimes.hp>0:
+        main_slime()
+    print ("HURRAY, LETS KEEP MOVING")
+
+# battling with goblins - drop is included
+def battle_with_goblin ():
+    while goblins.hp>0:
+        main_goblin()
+
+# battling with orcs - drop is included
+def battle_with_orc ():
+    while orcs.hp>0:
+        main_orc()
+
+# battling with DL - drop is included
+def battle_with_DL ():
+    while dungeon_lords.hp>0:
+        main_DL()
+
+
+
+
+
+
+battle_with_DL()
+
