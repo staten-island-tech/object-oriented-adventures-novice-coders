@@ -17,11 +17,11 @@ push=attack_types("push", 20)
 spells=attack_types("spell cast", 40)
 
 #--------------------------------------------------------
-choice=input ("what attack to u want to use? punch, slash, push, spells   ")
+# choice = input ("what attack to u want to use? punch, slash, push, spells   ")
 #-------------------------------------------------------------
 #BLOB ONLY
 
-def attacking_blob():
+def attacking_blob(choice):
     health= blobs.hp
     if choice== "punch":
         res=health-punch.dealt
@@ -45,13 +45,13 @@ def again_blobs():
             print ("victory")
         else: 
             print ("enemy still has: " + str (blobs.hp))
-            choice==input ("what attack to u want to use to attack again? punch, slash, push, spells   ")
-            attacking_blob()
+            new_choice=input ("what attack to u want to use to attack again? punch, slash, push, spells   ")
+            attacking_blob(new_choice)
 
 #-------------------------------------------------------------
 #SHURB ONLY
 
-def attacking_shrub():
+def attacking_shrub(choice):
     health= shrubs.hp
     if choice== "punch":
         res=health-punch.dealt
@@ -76,14 +76,14 @@ def again_shrubs():
             players.xp=players.xp+shrubs.drop
         else: 
             print ("enemy still has: " + str (shrubs.hp))
-            choice==input ("what attack to u want to use to attack again? punch, slash, push, spells   ")
-            equations_shrub ()
+            new_choice = input ("what attack to u want to use to attack again? punch, slash, push, spells   ")
+            equations_shrub (new_choice)
 
 #attacking_shrub()
 #-------------------------------------------------------
 # SLIMES ONLY
 
-def attacking_slime():
+def attacking_slime(choice):
     health= slimes.hp
     if choice== "punch":
         res=health-punch.dealt
@@ -109,14 +109,14 @@ def again_slimes():
 
         else: 
             print ("enemy still has: " + str(slimes.hp))
-            choice ==input ("what attack to u want to use to attack again? punch, slash, push, spells   ")
-            attacking_slime()
+            new_choice =input ("what attack to u want to use to attack again? punch, slash, push, spells   ")
+            attacking_slime(new_choice)
 
 #attacking_slime()
 #-------------------------------------------------------
 # GOBLINS ONLY 
 
-def attacking_goblin():
+def attacking_goblin(choice):
     health= goblins.hp
     if choice== "punch":
         res=health-punch.dealt
@@ -141,14 +141,14 @@ def again_goblins():
             players.xp=players.xp+goblins.drop
         else: 
             print ("enemy still has: " +str (goblins.hp))
-            choice == input ("what attack to u want to use to attack again? punch, slash, push, spells   ")
+            new_choice = input ("what attack to u want to use to attack again? punch, slash, push, spells   ")
             #attacking_goblin()
 
 #attacking_goblin()
 #-------------------------------------------------------
 # ORCS ONLY 
 
-def attacking_orc():
+def attacking_orc(choice):
     health= orcs.hp
     if choice== "punch":
         res=health-(punch.dealt)*.8
@@ -172,14 +172,14 @@ def again_orcs():
         players.xp=players.xp+orcs.drop
     else: 
         print ("enemy still has: " + str (orcs.hp))
-        choice == input ("what attack to u want to use to attack again? punch, slash, push, spells   ")
-        attacking_orc()
+        new_choice = input ("what attack to u want to use to attack again? punch, slash, push, spells   ")
+        attacking_orc(new_choice)
 
 #attacking_orc()
 #-------------------------------------------------------
 # DL ONLY
 
-def attacking_dungeon_lord():
+def attacking_dungeon_lord(choice):
     health= dungeon_lords.hp
     if choice== "punch":
         res=health-(punch.dealt)*.8
@@ -205,8 +205,8 @@ def again_dungeon_lords():
         print ("OH NO, DUNGEON LORD HEALED 5HP")
         boost=dungeon_lords.hp+5
         print ("enemy still has: " + str(boost))
-        choice == input ("what attack to u want to use to attack again? punch, slash, push, spells   ")
-        attacking_dungeon_lord()
+        new_choice = input ("what attack to u want to use to attack again? punch, slash, push, spells   ")
+        attacking_dungeon_lord(new_choice)
 
 
 #-------------------------------------------------
@@ -217,8 +217,14 @@ x1 = random.randint(1,12)
 x2 = random.randint(1,12)
 x3 = random.randint(1,12)
 
+def main():
+   choice = input ("what attack to u want to use? punch, slash, push, spells   ")
+   equations_shrub(choice)
 
-def equations_shrub():
+def equations_shrub(choice):
+        print()
+        print("curr operation:", choice)
+        print()
     #while shrubs.hp, blobs.hp, slimes.hp, goblins.hp, orcs.hp, dungeon_lords.hp != 0:
 
         if choice == "punch":
@@ -229,7 +235,7 @@ def equations_shrub():
                 print("Correct answer: " + str(x1+x2))
             else:
                 print("Congratulations you can do basic math; you bring your arm back and drive it straight into the monster's gut, as it howls in pain.")
-                attacking_shrub()
+                attacking_shrub(choice)
         elif choice == "slash":
             print(str(x1) + " * " + str(x2) + " = ? ")
             answer = int(input("What is the answer? (Warning: failure to attack results in no damage dealt, solve the problem correctly to attack successfully) "))
@@ -238,7 +244,7 @@ def equations_shrub():
                 print("Correct answer: " + str(x1 * x2))
             else:
                 print("Yay you can multiply; using your blade, you swiftly drag it down the monster's back, doing a decent amount of damage.")
-                attacking_shrub()
+                attacking_shrub(choice)
         elif choice == "push":
             print(str(x1) + "-" + str(x2) + " = ? ")
             answer = int(input("What is the answer? (Warning: failure to attack results in no damage dealt, solve the problem correctly to attack successfully) "))
@@ -247,13 +253,13 @@ def equations_shrub():
                 print("Correct answer: " + str(x1 - x2))
             else:
                 print("Good to know you can at least subtract; an intrusive thought enters your head and before you know it, you have tackled the monster and pushed it back knocking it against the wall and giving it quite the concussion, if monsters can get concussions.")
-                attacking_shrub()
+                attacking_shrub(choice)
         elif choice == "spells":
             print(str(x1) + "+" + str(x2) + "*" + str(x3) + " = ? ")
             answer = int(input("What is the answer? (Warning: failure to attack results in no damage dealt, solve the problem correctly to attack successfully) "))
             if answer == x1 + x2 * x3:
                 print("You mutter some mumbo-jumbo from memory that you've heard that one crazy hobo wizard chant in his hut, and miraculously, it seems to do something as the monster stops,looking confused, and suddenly hits itself with an incredible amount of force. yayy you solved a multi-operation problem :D")
-                attacking_shrub()
+                attacking_shrub(choice)
             elif answer != (x1 + x2) * x3 and x1 + x2 * x3:
                 print("Good effort, but no, it is not " + str(answer) + ". A traveling witch once taught you a spell to launch your foes several feet away from you, quite useful in this moment where the monster was approaching you in a threatening manner. You quickly draw your wand and yell out the spell, but uh-oh. It seems you should have practiced more, as nothing happens, and the monster appears even more irritated at your foolish antics.")
                 print("Correct answer: " + str(x1 + x2 * x3))

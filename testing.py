@@ -1,13 +1,16 @@
-from attacks import attacking_shrub, again_shrubs, equations_shrub
+from attacks import attacking_shrub, again_shrubs, equations_shrub, main
 from enemyATK import shrub_attacking
 from enemy import shrubs
 
 
-equations_shrub()
 def cheking ():
-    if shrubs.hp!= 0:
+    main()
+    while shrubs.hp > 0:
+        print ("this is shrubs hp" , shrubs.hp)
+        print("running")
         shrub_attacking()
-        equations_shrub()
-        cheking()
-if shrubs.hp!= 0:
-    cheking()
+        main()
+    
+    print ("cheking victory")
+
+cheking()

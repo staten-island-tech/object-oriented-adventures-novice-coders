@@ -58,10 +58,10 @@ def equations():
                 print("Correct answer: " + str(x1 + x2 * x3))
     else:
         print("Woohoo the monster died")
+
+equations()
+
 '''
-#equations()
-
-
 
 
 #test
@@ -92,6 +92,7 @@ PEMDAS() """
 else: print(“woohoo you killed the monster”)  """
 
 #--------------------------------------------------------
+'''
 def equations_shrub():
     #while shrubs.hp, blobs.hp, slimes.hp, goblins.hp, orcs.hp, dungeon_lords.hp != 0:
         choice=input ("what attack to u want to use? punch, slash, push, spells   ")
@@ -138,3 +139,4 @@ def equations_shrub():
         #print("Woohoo the monster died")
                 
 equations_shrub()
+'''
