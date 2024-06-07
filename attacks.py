@@ -235,14 +235,18 @@ def main_DL():
 #-------------------------------------------------
 import random
 
-
+"""
 x1 = random.randint(1,12)
 x2 = random.randint(1,12)
 x3 = random.randint(1,12)
 
+"""
 
 #--------------------- equations for blob
 def equations_blob(choice):
+        x1 = random.randint(1,12)
+        x2 = random.randint(1,12)
+        x3 = random.randint(1,12)
         if choice == "punch":
             print(str(x1) + " + " + str(x2) + " = ? ")
             answer = int(input("What is the answer? (Warning: failure to attack results in no damage dealt, solve the problem correctly to attack successfully) "))
@@ -285,210 +289,225 @@ def equations_blob(choice):
 
 #--------------------- equations for shrubs
 def equations_shrub(choice):
+        a1 = random.randint(1,12)
+        a2 = random.randint(1,12)
+        a3 = random.randint(1,12)
         if choice == "punch":
-            print(str(x1) + " + " + str(x2) + " = ? ")
+            print(str(a1) + " + " + str(a2) + " = ? ")
             answer = int(input("What is the answer? (Warning: failure to attack results in no damage dealt, solve the problem correctly to attack successfully) "))
-            if answer != x1 + x2:
+            if answer != a1 + a2:
                 print("You try to punch your opponent, only to miss your swing and stumble, giving the monster the opportunity to attack. You just failed to do kindergarten math :/")
-                print("Correct answer: " + str(x1+x2))
+                print("Correct answer: " + str(a1+a2))
             else:
                 print("Congratulations you can do basic math; you bring your arm back and drive it straight into the monster's gut, as it howls in pain.")
                 attacking_shrub(choice)
         elif choice == "slash":
-            print(str(x1) + " * " + str(x2) + " = ? ")
+            print(str(a1) + " * " + str(a2) + " = ? ")
             answer = int(input("What is the answer? (Warning: failure to attack results in no damage dealt, solve the problem correctly to attack successfully) "))
-            if answer != x1 * x2:
+            if answer != a1 * a2:
                 print("You pull your rusty dagger you found on the side of a street and bring it in a downward slash, but your grip on the weapon wasn't strong enough, and it slips before you can even hit your opponent. Looks like you need to work on your skills, in math and combat")
-                print("Correct answer: " + str(x1 * x2))
+                print("Correct answer: " + str(a1 * a2))
             else:
                 print("Yay you can multiply; using your blade, you swiftly drag it down the monster's back, doing a decent amount of damage.")
                 attacking_shrub(choice)
         elif choice == "push":
-            print(str(x1) + "-" + str(x2) + " = ? ")
+            print(str(a1) + "-" + str(a2) + " = ? ")
             answer = int(input("What is the answer? (Warning: failure to attack results in no damage dealt, solve the problem correctly to attack successfully) "))
-            if answer != x1 - x2:
+            if answer != a1 - a2:
                 print("Really? :/ I hope you know the monster is probably laughing at your terrible skill. Deciding to just wing it, you bring your arms out and rush forward to push your enemy back, but the universe seems to hate you as you somehow manage to trip on nothing and fall flat on your face in front of the monster as it prepares to retaliate.")
-                print("Correct answer: " + str(x1 - x2))
+                print("Correct answer: " + str(a1 - a2))
             else:
                 print("Good to know you can at least subtract; an intrusive thought enters your head and before you know it, you have tackled the monster and pushed it back knocking it against the wall and giving it quite the concussion, if monsters can get concussions.")
                 attacking_shrub(choice)
         elif choice == "spells":
-            print(str(x1) + "+" + str(x2) + "*" + str(x3) + " = ? ")
+            print(str(a1) + "+" + str(a2) + "*" + str(a3) + " = ? ")
             answer = int(input("What is the answer? (Warning: failure to attack results in no damage dealt, solve the problem correctly to attack successfully) "))
-            if answer == x1 + x2 * x3:
+            if answer == a1 + a2 * a3:
                 print("You mutter some mumbo-jumbo from memory that you've heard that one crazy hobo wizard chant in his hut, and miraculously, it seems to do something as the monster stops,looking confused, and suddenly hits itself with an incredible amount of force. yayy you solved a multi-operation problem :D")
                 attacking_shrub(choice)
-            elif answer != (x1 + x2) * x3 and x1 + x2 * x3:
+            elif answer != (a1 + a2) * a3 and a1 + a2 * a3:
                 print("Good effort, but no, it is not " + str(answer) + ". A traveling witch once taught you a spell to launch your foes several feet away from you, quite useful in this moment where the monster was approaching you in a threatening manner. You quickly draw your wand and yell out the spell, but uh-oh. It seems you should have practiced more, as nothing happens, and the monster appears even more irritated at your foolish antics.")
-                print("Correct answer: " + str(x1 + x2 * x3))
+                print("Correct answer: " + str(a1 + a2 * a3))
             else:
                 print("You remember snooping through your mother's magic scrolls and finding a powerful spell that shoots lightning at your target, you quickly mutter the incantation, yet nothing happened. Oh no! You forgot to draw your wand first, like how does one even forget the order of things? (bruh imagine forgetting PEMDAS)")
-                print("Correct answer: " + str(x1 + x2 * x3))
+                print("Correct answer: " + str(a1 + a2 * a3))
 
 #--------------------- equaions for slimes
 def equations_slime(choice):
+        b1 = random.randint(1,12)
+        b2 = random.randint(1,12)
+        b3 = random.randint(1,12)
         if choice == "punch":
-            print(str(x1) + " + " + str(x2) + " = ? ")
+            print(str(b1) + " + " + str(b2) + " = ? ")
             answer = int(input("What is the answer? (Warning: failure to attack results in no damage dealt, solve the problem correctly to attack successfully) "))
-            if answer != x1 + x2:
+            if answer != b1 + b2:
                 print("You try to punch your opponent, only to miss your swing and stumble, giving the monster the opportunity to attack. You just failed to do kindergarten math :/")
-                print("Correct answer: " + str(x1+x2))
+                print("Correct answer: " + str(b1+b2))
             else:
                 print("Congratulations you can do basic math; you bring your arm back and drive it straight into the monster's gut, as it howls in pain.")
                 attacking_slime(choice)
         elif choice == "slash":
-            print(str(x1) + " * " + str(x2) + " = ? ")
+            print(str(b1) + " * " + str(b2) + " = ? ")
             answer = int(input("What is the answer? (Warning: failure to attack results in no damage dealt, solve the problem correctly to attack successfully) "))
-            if answer != x1 * x2:
+            if answer != b1 * b2:
                 print("You pull your rusty dagger you found on the side of a street and bring it in a downward slash, but your grip on the weapon wasn't strong enough, and it slips before you can even hit your opponent. Looks like you need to work on your skills, in math and combat")
-                print("Correct answer: " + str(x1 * x2))
+                print("Correct answer: " + str(b1 * b2))
             else:
                 print("Yay you can multiply; using your blade, you swiftly drag it down the monster's back, doing a decent amount of damage.")
                 attacking_slime(choice)
         elif choice == "push":
-            print(str(x1) + "-" + str(x2) + " = ? ")
+            print(str(b1) + "-" + str(b2) + " = ? ")
             answer = int(input("What is the answer? (Warning: failure to attack results in no damage dealt, solve the problem correctly to attack successfully) "))
-            if answer != x1 - x2:
+            if answer != b1 - b2:
                 print("Really? :/ I hope you know the monster is probably laughing at your terrible skill. Deciding to just wing it, you bring your arms out and rush forward to push your enemy back, but the universe seems to hate you as you somehow manage to trip on nothing and fall flat on your face in front of the monster as it prepares to retaliate.")
-                print("Correct answer: " + str(x1 - x2))
+                print("Correct answer: " + str(b1 - b2))
             else:
                 print("Good to know you can at least subtract; an intrusive thought enters your head and before you know it, you have tackled the monster and pushed it back knocking it against the wall and giving it quite the concussion, if monsters can get concussions.")
                 attacking_slime(choice)
         elif choice == "spells":
-            print(str(x1) + "+" + str(x2) + "*" + str(x3) + " = ? ")
+            print(str(b1) + "+" + str(b2) + "*" + str(b3) + " = ? ")
             answer = int(input("What is the answer? (Warning: failure to attack results in no damage dealt, solve the problem correctly to attack successfully) "))
-            if answer == x1 + x2 * x3:
+            if answer == b1 + b2 * b3:
                 print("You mutter some mumbo-jumbo from memory that you've heard that one crazy hobo wizard chant in his hut, and miraculously, it seems to do something as the monster stops,looking confused, and suddenly hits itself with an incredible amount of force. yayy you solved a multi-operation problem :D")
                 attacking_slime(choice)
-            elif answer != (x1 + x2) * x3 and x1 + x2 * x3:
+            elif answer != (b1 + b2) * b3 and b1 + b2 * b3:
                 print("Good effort, but no, it is not " + str(answer) + ". A traveling witch once taught you a spell to launch your foes several feet away from you, quite useful in this moment where the monster was approaching you in a threatening manner. You quickly draw your wand and yell out the spell, but uh-oh. It seems you should have practiced more, as nothing happens, and the monster appears even more irritated at your foolish antics.")
-                print("Correct answer: " + str(x1 + x2 * x3))
+                print("Correct answer: " + str(b1 + b2 * b3))
             else:
                 print("You remember snooping through your mother's magic scrolls and finding a powerful spell that shoots lightning at your target, you quickly mutter the incantation, yet nothing happened. Oh no! You forgot to draw your wand first, like how does one even forget the order of things? (bruh imagine forgetting PEMDAS)")
-                print("Correct answer: " + str(x1 + x2 * x3))
+                print("Correct answer: " + str(b1 + b2 * b3))
 
 #--------------------- equations for goblins
 def equations_goblin(choice):
+        c1 = random.randint(1,12)
+        c2 = random.randint(1,12)
+        c3 = random.randint(1,12)
         if choice == "punch":
-            print(str(x1) + " + " + str(x2) + " = ? ")
+            print(str(c1) + " + " + str(c2) + " = ? ")
             answer = int(input("What is the answer? (Warning: failure to attack results in no damage dealt, solve the problem correctly to attack successfully) "))
-            if answer != x1 + x2:
+            if answer != c1 + c2:
                 print("You try to punch your opponent, only to miss your swing and stumble, giving the monster the opportunity to attack. You just failed to do kindergarten math :/")
-                print("Correct answer: " + str(x1+x2))
+                print("Correct answer: " + str(c1+c2))
             else:
                 print("Congratulations you can do basic math; you bring your arm back and drive it straight into the monster's gut, as it howls in pain.")
                 attacking_goblin(choice)
         elif choice == "slash":
-            print(str(x1) + " * " + str(x2) + " = ? ")
+            print(str(c1) + " * " + str(c2) + " = ? ")
             answer = int(input("What is the answer? (Warning: failure to attack results in no damage dealt, solve the problem correctly to attack successfully) "))
-            if answer != x1 * x2:
+            if answer != c1 * c2:
                 print("You pull your rusty dagger you found on the side of a street and bring it in a downward slash, but your grip on the weapon wasn't strong enough, and it slips before you can even hit your opponent. Looks like you need to work on your skills, in math and combat")
-                print("Correct answer: " + str(x1 * x2))
+                print("Correct answer: " + str(c1 * c2))
             else:
                 print("Yay you can multiply; using your blade, you swiftly drag it down the monster's back, doing a decent amount of damage.")
                 attacking_goblin(choice)
         elif choice == "push":
-            print(str(x1) + "-" + str(x2) + " = ? ")
+            print(str(c1) + "-" + str(c2) + " = ? ")
             answer = int(input("What is the answer? (Warning: failure to attack results in no damage dealt, solve the problem correctly to attack successfully) "))
-            if answer != x1 - x2:
+            if answer != c1 - c2:
                 print("Really? :/ I hope you know the monster is probably laughing at your terrible skill. Deciding to just wing it, you bring your arms out and rush forward to push your enemy back, but the universe seems to hate you as you somehow manage to trip on nothing and fall flat on your face in front of the monster as it prepares to retaliate.")
-                print("Correct answer: " + str(x1 - x2))
+                print("Correct answer: " + str(c1 - c2))
             else:
                 print("Good to know you can at least subtract; an intrusive thought enters your head and before you know it, you have tackled the monster and pushed it back knocking it against the wall and giving it quite the concussion, if monsters can get concussions.")
                 attacking_goblin(choice)
         elif choice == "spells":
-            print(str(x1) + "+" + str(x2) + "*" + str(x3) + " = ? ")
+            print(str(c1) + "+" + str(c2) + "*" + str(c3) + " = ? ")
             answer = int(input("What is the answer? (Warning: failure to attack results in no damage dealt, solve the problem correctly to attack successfully) "))
-            if answer == x1 + x2 * x3:
+            if answer == c1 + c2 * c3:
                 print("You mutter some mumbo-jumbo from memory that you've heard that one crazy hobo wizard chant in his hut, and miraculously, it seems to do something as the monster stops,looking confused, and suddenly hits itself with an incredible amount of force. yayy you solved a multi-operation problem :D")
                 attacking_goblin(choice)
-            elif answer != (x1 + x2) * x3 and x1 + x2 * x3:
+            elif answer != (c1 + c2) * c3 and c1 + c2 * c3:
                 print("Good effort, but no, it is not " + str(answer) + ". A traveling witch once taught you a spell to launch your foes several feet away from you, quite useful in this moment where the monster was approaching you in a threatening manner. You quickly draw your wand and yell out the spell, but uh-oh. It seems you should have practiced more, as nothing happens, and the monster appears even more irritated at your foolish antics.")
-                print("Correct answer: " + str(x1 + x2 * x3))
+                print("Correct answer: " + str(c1 + c2 * c3))
             else:
                 print("You remember snooping through your mother's magic scrolls and finding a powerful spell that shoots lightning at your target, you quickly mutter the incantation, yet nothing happened. Oh no! You forgot to draw your wand first, like how does one even forget the order of things? (bruh imagine forgetting PEMDAS)")
-                print("Correct answer: " + str(x1 + x2 * x3))
+                print("Correct answer: " + str(c1 + c2 * c3))
 
 #--------------------- equations for orcs
 def equations_orc(choice):
+        d1 = random.randint(1,12)
+        d2 = random.randint(1,12)
+        d3 = random.randint(1,12)
         if choice == "punch":
-            print(str(x1) + " + " + str(x2) + " = ? ")
+            print(str(d1) + " + " + str(d2) + " = ? ")
             answer = int(input("What is the answer? (Warning: failure to attack results in no damage dealt, solve the problem correctly to attack successfully) "))
-            if answer != x1 + x2:
+            if answer != d1 + d2:
                 print("You try to punch your opponent, only to miss your swing and stumble, giving the monster the opportunity to attack. You just failed to do kindergarten math :/")
-                print("Correct answer: " + str(x1+x2))
+                print("Correct answer: " + str(d1+d2))
             else:
                 print("Congratulations you can do basic math; you bring your arm back and drive it straight into the monster's gut, as it howls in pain.")
                 attacking_orc(choice)
         elif choice == "slash":
-            print(str(x1) + " * " + str(x2) + " = ? ")
+            print(str(d1) + " * " + str(d2) + " = ? ")
             answer = int(input("What is the answer? (Warning: failure to attack results in no damage dealt, solve the problem correctly to attack successfully) "))
-            if answer != x1 * x2:
+            if answer != d1 * d2:
                 print("You pull your rusty dagger you found on the side of a street and bring it in a downward slash, but your grip on the weapon wasn't strong enough, and it slips before you can even hit your opponent. Looks like you need to work on your skills, in math and combat")
-                print("Correct answer: " + str(x1 * x2))
+                print("Correct answer: " + str(d1 * d2))
             else:
                 print("Yay you can multiply; using your blade, you swiftly drag it down the monster's back, doing a decent amount of damage.")
                 attacking_orc(choice)
         elif choice == "push":
-            print(str(x1) + "-" + str(x2) + " = ? ")
+            print(str(d1) + "-" + str(d2) + " = ? ")
             answer = int(input("What is the answer? (Warning: failure to attack results in no damage dealt, solve the problem correctly to attack successfully) "))
-            if answer != x1 - x2:
+            if answer != d1 - d2:
                 print("Really? :/ I hope you know the monster is probably laughing at your terrible skill. Deciding to just wing it, you bring your arms out and rush forward to push your enemy back, but the universe seems to hate you as you somehow manage to trip on nothing and fall flat on your face in front of the monster as it prepares to retaliate.")
-                print("Correct answer: " + str(x1 - x2))
+                print("Correct answer: " + str(d1 - d2))
             else:
                 print("Good to know you can at least subtract; an intrusive thought enters your head and before you know it, you have tackled the monster and pushed it back knocking it against the wall and giving it quite the concussion, if monsters can get concussions.")
                 attacking_orc(choice)
         elif choice == "spells":
-            print(str(x1) + "+" + str(x2) + "*" + str(x3) + " = ? ")
+            print(str(d1) + "+" + str(d2) + "*" + str(d3) + " = ? ")
             answer = int(input("What is the answer? (Warning: failure to attack results in no damage dealt, solve the problem correctly to attack successfully) "))
-            if answer == x1 + x2 * x3:
+            if answer == d1 + d2 * d3:
                 print("You mutter some mumbo-jumbo from memory that you've heard that one crazy hobo wizard chant in his hut, and miraculously, it seems to do something as the monster stops,looking confused, and suddenly hits itself with an incredible amount of force. yayy you solved a multi-operation problem :D")
                 attacking_orc(choice)
-            elif answer != (x1 + x2) * x3 and x1 + x2 * x3:
+            elif answer != (d1 + d2) * d3 and d1 + d2 * d3:
                 print("Good effort, but no, it is not " + str(answer) + ". A traveling witch once taught you a spell to launch your foes several feet away from you, quite useful in this moment where the monster was approaching you in a threatening manner. You quickly draw your wand and yell out the spell, but uh-oh. It seems you should have practiced more, as nothing happens, and the monster appears even more irritated at your foolish antics.")
-                print("Correct answer: " + str(x1 + x2 * x3))
+                print("Correct answer: " + str(d1 + d2 * d3))
             else:
                 print("You remember snooping through your mother's magic scrolls and finding a powerful spell that shoots lightning at your target, you quickly mutter the incantation, yet nothing happened. Oh no! You forgot to draw your wand first, like how does one even forget the order of things? (bruh imagine forgetting PEMDAS)")
-                print("Correct answer: " + str(x1 + x2 * x3))
+                print("Correct answer: " + str(d1 + d2 * d3))
 
 #--------------------- equations for DL
 def equations_DL(choice):
+        e1 = random.randint(1,12)
+        e2 = random.randint(1,12)
+        e3 = random.randint(1,12)
         if choice == "punch":
-            print(str(x1) + " + " + str(x2) + " = ? ")
+            print(str(e1) + " + " + str(e2) + " = ? ")
             answer = int(input("What is the answer? (Warning: failure to attack results in no damage dealt, solve the problem correctly to attack successfully) "))
-            if answer != x1 + x2:
+            if answer != e1 + e2:
                 print("You try to punch your opponent, only to miss your swing and stumble, giving the monster the opportunity to attack. You just failed to do kindergarten math :/")
-                print("Correct answer: " + str(x1+x2))
+                print("Correct answer: " + str(e1+e2))
             else:
                 print("Congratulations you can do basic math; you bring your arm back and drive it straight into the monster's gut, as it howls in pain.")
                 attacking_dungeon_lord(choice)
         elif choice == "slash":
-            print(str(x1) + " * " + str(x2) + " = ? ")
+            print(str(e1) + " * " + str(e2) + " = ? ")
             answer = int(input("What is the answer? (Warning: failure to attack results in no damage dealt, solve the problem correctly to attack successfully) "))
-            if answer != x1 * x2:
+            if answer != e1 * e2:
                 print("You pull your rusty dagger you found on the side of a street and bring it in a downward slash, but your grip on the weapon wasn't strong enough, and it slips before you can even hit your opponent. Looks like you need to work on your skills, in math and combat")
-                print("Correct answer: " + str(x1 * x2))
+                print("Correct answer: " + str(e1 * e2))
             else:
                 print("Yay you can multiply; using your blade, you swiftly drag it down the monster's back, doing a decent amount of damage.")
                 attacking_dungeon_lord(choice)
         elif choice == "push":
-            print(str(x1) + "-" + str(x2) + " = ? ")
+            print(str(e1) + "-" + str(e2) + " = ? ")
             answer = int(input("What is the answer? (Warning: failure to attack results in no damage dealt, solve the problem correctly to attack successfully) "))
-            if answer != x1 - x2:
+            if answer != e1 - e2:
                 print("Really? :/ I hope you know the monster is probably laughing at your terrible skill. Deciding to just wing it, you bring your arms out and rush forward to push your enemy back, but the universe seems to hate you as you somehow manage to trip on nothing and fall flat on your face in front of the monster as it prepares to retaliate.")
-                print("Correct answer: " + str(x1 - x2))
+                print("Correct answer: " + str(e1 - e2))
             else:
                 print("Good to know you can at least subtract; an intrusive thought enters your head and before you know it, you have tackled the monster and pushed it back knocking it against the wall and giving it quite the concussion, if monsters can get concussions.")
                 attacking_dungeon_lord(choice)
         elif choice == "spells":
-            print(str(x1) + "+" + str(x2) + "*" + str(x3) + " = ? ")
+            print(str(e1) + "+" + str(e2) + "*" + str(e3) + " = ? ")
             answer = int(input("What is the answer? (Warning: failure to attack results in no damage dealt, solve the problem correctly to attack successfully) "))
-            if answer == x1 + x2 * x3:
+            if answer == e1 + e2 * e3:
                 print("You mutter some mumbo-jumbo from memory that you've heard that one crazy hobo wizard chant in his hut, and miraculously, it seems to do something as the monster stops,looking confused, and suddenly hits itself with an incredible amount of force. yayy you solved a multi-operation problem :D")
                 attacking_dungeon_lord(choice)
-            elif answer != (x1 + x2) * x3 and x1 + x2 * x3:
+            elif answer != (e1 + e2) * e3 and e1 + e2 * e3:
                 print("Good effort, but no, it is not " + str(answer) + ". A traveling witch once taught you a spell to launch your foes several feet away from you, quite useful in this moment where the monster was approaching you in a threatening manner. You quickly draw your wand and yell out the spell, but uh-oh. It seems you should have practiced more, as nothing happens, and the monster appears even more irritated at your foolish antics.")
-                print("Correct answer: " + str(x1 + x2 * x3))
+                print("Correct answer: " + str(e1 + e2 * e3))
             else:
                 print("You remember snooping through your mother's magic scrolls and finding a powerful spell that shoots lightning at your target, you quickly mutter the incantation, yet nothing happened. Oh no! You forgot to draw your wand first, like how does one even forget the order of things? (bruh imagine forgetting PEMDAS)")
-                print("Correct answer: " + str(x1 + x2 * x3))
+                print("Correct answer: " + str(e1 + e2 * e3))
