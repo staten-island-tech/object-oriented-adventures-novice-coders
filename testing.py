@@ -1,6 +1,12 @@
 from attacks import main_blob, main_shrub, main_slime, main_goblin, main_orc, main_DL
 from enemy import shrubs, slimes, orcs, goblins, dungeon_lords
+from user import players
 
+
+def dead():
+    if players.health <= 0:
+        print("you died")
+        print ("LETS START OVER >:) ")
 
 #battle with blob
 def battle_with_blob():
@@ -32,6 +38,7 @@ def battle_with_orc ():
 def battle_with_DL ():
     while dungeon_lords.hp>0:
         main_DL()
+        dead()
 
 
 

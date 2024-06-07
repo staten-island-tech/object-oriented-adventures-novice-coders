@@ -205,8 +205,9 @@ def again_dungeon_lords():
         boost=dungeon_lords.hp+5
         print ("enemy still has: " + str(boost))
         DL_attacking()
-        new_choice = input ("what attack to u want to use to attack again? punch, slash, push, spells   ")
-        equations_DL(new_choice)
+        if players.health>0:
+            new_choice = input ("what attack to u want to use to attack again? punch, slash, push, spells   ")
+            equations_DL(new_choice)
 
 #-------------------------------------------------
 def main_blob():
@@ -298,6 +299,7 @@ def equations_shrub(choice):
             if answer != a1 + a2:
                 print("You try to punch your opponent, only to miss your swing and stumble, giving the monster the opportunity to attack. You just failed to do kindergarten math :/")
                 print("Correct answer: " + str(a1+a2))
+                shrub_attacking()
             else:
                 print("Congratulations you can do basic math; you bring your arm back and drive it straight into the monster's gut, as it howls in pain.")
                 attacking_shrub(choice)
@@ -307,6 +309,7 @@ def equations_shrub(choice):
             if answer != a1 * a2:
                 print("You pull your rusty dagger you found on the side of a street and bring it in a downward slash, but your grip on the weapon wasn't strong enough, and it slips before you can even hit your opponent. Looks like you need to work on your skills, in math and combat")
                 print("Correct answer: " + str(a1 * a2))
+                shrub_attacking()
             else:
                 print("Yay you can multiply; using your blade, you swiftly drag it down the monster's back, doing a decent amount of damage.")
                 attacking_shrub(choice)
@@ -316,6 +319,7 @@ def equations_shrub(choice):
             if answer != a1 - a2:
                 print("Really? :/ I hope you know the monster is probably laughing at your terrible skill. Deciding to just wing it, you bring your arms out and rush forward to push your enemy back, but the universe seems to hate you as you somehow manage to trip on nothing and fall flat on your face in front of the monster as it prepares to retaliate.")
                 print("Correct answer: " + str(a1 - a2))
+                shrub_attacking()
             else:
                 print("Good to know you can at least subtract; an intrusive thought enters your head and before you know it, you have tackled the monster and pushed it back knocking it against the wall and giving it quite the concussion, if monsters can get concussions.")
                 attacking_shrub(choice)
@@ -328,9 +332,11 @@ def equations_shrub(choice):
             elif answer != (a1 + a2) * a3 and a1 + a2 * a3:
                 print("Good effort, but no, it is not " + str(answer) + ". A traveling witch once taught you a spell to launch your foes several feet away from you, quite useful in this moment where the monster was approaching you in a threatening manner. You quickly draw your wand and yell out the spell, but uh-oh. It seems you should have practiced more, as nothing happens, and the monster appears even more irritated at your foolish antics.")
                 print("Correct answer: " + str(a1 + a2 * a3))
+                shrub_attacking()
             else:
                 print("You remember snooping through your mother's magic scrolls and finding a powerful spell that shoots lightning at your target, you quickly mutter the incantation, yet nothing happened. Oh no! You forgot to draw your wand first, like how does one even forget the order of things? (bruh imagine forgetting PEMDAS)")
                 print("Correct answer: " + str(a1 + a2 * a3))
+                shrub_attacking()
 
 #--------------------- equaions for slimes
 def equations_slime(choice):
@@ -343,6 +349,7 @@ def equations_slime(choice):
             if answer != b1 + b2:
                 print("You try to punch your opponent, only to miss your swing and stumble, giving the monster the opportunity to attack. You just failed to do kindergarten math :/")
                 print("Correct answer: " + str(b1+b2))
+                slime_attacking()
             else:
                 print("Congratulations you can do basic math; you bring your arm back and drive it straight into the monster's gut, as it howls in pain.")
                 attacking_slime(choice)
@@ -352,6 +359,7 @@ def equations_slime(choice):
             if answer != b1 * b2:
                 print("You pull your rusty dagger you found on the side of a street and bring it in a downward slash, but your grip on the weapon wasn't strong enough, and it slips before you can even hit your opponent. Looks like you need to work on your skills, in math and combat")
                 print("Correct answer: " + str(b1 * b2))
+                slime_attacking()
             else:
                 print("Yay you can multiply; using your blade, you swiftly drag it down the monster's back, doing a decent amount of damage.")
                 attacking_slime(choice)
@@ -361,6 +369,7 @@ def equations_slime(choice):
             if answer != b1 - b2:
                 print("Really? :/ I hope you know the monster is probably laughing at your terrible skill. Deciding to just wing it, you bring your arms out and rush forward to push your enemy back, but the universe seems to hate you as you somehow manage to trip on nothing and fall flat on your face in front of the monster as it prepares to retaliate.")
                 print("Correct answer: " + str(b1 - b2))
+                slime_attacking()
             else:
                 print("Good to know you can at least subtract; an intrusive thought enters your head and before you know it, you have tackled the monster and pushed it back knocking it against the wall and giving it quite the concussion, if monsters can get concussions.")
                 attacking_slime(choice)
@@ -373,9 +382,11 @@ def equations_slime(choice):
             elif answer != (b1 + b2) * b3 and b1 + b2 * b3:
                 print("Good effort, but no, it is not " + str(answer) + ". A traveling witch once taught you a spell to launch your foes several feet away from you, quite useful in this moment where the monster was approaching you in a threatening manner. You quickly draw your wand and yell out the spell, but uh-oh. It seems you should have practiced more, as nothing happens, and the monster appears even more irritated at your foolish antics.")
                 print("Correct answer: " + str(b1 + b2 * b3))
+                slime_attacking()
             else:
                 print("You remember snooping through your mother's magic scrolls and finding a powerful spell that shoots lightning at your target, you quickly mutter the incantation, yet nothing happened. Oh no! You forgot to draw your wand first, like how does one even forget the order of things? (bruh imagine forgetting PEMDAS)")
                 print("Correct answer: " + str(b1 + b2 * b3))
+                slime_attacking()
 
 #--------------------- equations for goblins
 def equations_goblin(choice):
@@ -388,6 +399,7 @@ def equations_goblin(choice):
             if answer != c1 + c2:
                 print("You try to punch your opponent, only to miss your swing and stumble, giving the monster the opportunity to attack. You just failed to do kindergarten math :/")
                 print("Correct answer: " + str(c1+c2))
+                goblin_attacking()
             else:
                 print("Congratulations you can do basic math; you bring your arm back and drive it straight into the monster's gut, as it howls in pain.")
                 attacking_goblin(choice)
@@ -397,6 +409,7 @@ def equations_goblin(choice):
             if answer != c1 * c2:
                 print("You pull your rusty dagger you found on the side of a street and bring it in a downward slash, but your grip on the weapon wasn't strong enough, and it slips before you can even hit your opponent. Looks like you need to work on your skills, in math and combat")
                 print("Correct answer: " + str(c1 * c2))
+                goblin_attacking()
             else:
                 print("Yay you can multiply; using your blade, you swiftly drag it down the monster's back, doing a decent amount of damage.")
                 attacking_goblin(choice)
@@ -406,6 +419,7 @@ def equations_goblin(choice):
             if answer != c1 - c2:
                 print("Really? :/ I hope you know the monster is probably laughing at your terrible skill. Deciding to just wing it, you bring your arms out and rush forward to push your enemy back, but the universe seems to hate you as you somehow manage to trip on nothing and fall flat on your face in front of the monster as it prepares to retaliate.")
                 print("Correct answer: " + str(c1 - c2))
+                goblin_attacking()
             else:
                 print("Good to know you can at least subtract; an intrusive thought enters your head and before you know it, you have tackled the monster and pushed it back knocking it against the wall and giving it quite the concussion, if monsters can get concussions.")
                 attacking_goblin(choice)
@@ -418,9 +432,11 @@ def equations_goblin(choice):
             elif answer != (c1 + c2) * c3 and c1 + c2 * c3:
                 print("Good effort, but no, it is not " + str(answer) + ". A traveling witch once taught you a spell to launch your foes several feet away from you, quite useful in this moment where the monster was approaching you in a threatening manner. You quickly draw your wand and yell out the spell, but uh-oh. It seems you should have practiced more, as nothing happens, and the monster appears even more irritated at your foolish antics.")
                 print("Correct answer: " + str(c1 + c2 * c3))
+                goblin_attacking()
             else:
                 print("You remember snooping through your mother's magic scrolls and finding a powerful spell that shoots lightning at your target, you quickly mutter the incantation, yet nothing happened. Oh no! You forgot to draw your wand first, like how does one even forget the order of things? (bruh imagine forgetting PEMDAS)")
                 print("Correct answer: " + str(c1 + c2 * c3))
+                goblin_attacking()
 
 #--------------------- equations for orcs
 def equations_orc(choice):
@@ -433,6 +449,7 @@ def equations_orc(choice):
             if answer != d1 + d2:
                 print("You try to punch your opponent, only to miss your swing and stumble, giving the monster the opportunity to attack. You just failed to do kindergarten math :/")
                 print("Correct answer: " + str(d1+d2))
+                orc_attacking()
             else:
                 print("Congratulations you can do basic math; you bring your arm back and drive it straight into the monster's gut, as it howls in pain.")
                 attacking_orc(choice)
@@ -442,6 +459,7 @@ def equations_orc(choice):
             if answer != d1 * d2:
                 print("You pull your rusty dagger you found on the side of a street and bring it in a downward slash, but your grip on the weapon wasn't strong enough, and it slips before you can even hit your opponent. Looks like you need to work on your skills, in math and combat")
                 print("Correct answer: " + str(d1 * d2))
+                orc_attacking()
             else:
                 print("Yay you can multiply; using your blade, you swiftly drag it down the monster's back, doing a decent amount of damage.")
                 attacking_orc(choice)
@@ -451,6 +469,7 @@ def equations_orc(choice):
             if answer != d1 - d2:
                 print("Really? :/ I hope you know the monster is probably laughing at your terrible skill. Deciding to just wing it, you bring your arms out and rush forward to push your enemy back, but the universe seems to hate you as you somehow manage to trip on nothing and fall flat on your face in front of the monster as it prepares to retaliate.")
                 print("Correct answer: " + str(d1 - d2))
+                orc_attacking()
             else:
                 print("Good to know you can at least subtract; an intrusive thought enters your head and before you know it, you have tackled the monster and pushed it back knocking it against the wall and giving it quite the concussion, if monsters can get concussions.")
                 attacking_orc(choice)
@@ -463,9 +482,11 @@ def equations_orc(choice):
             elif answer != (d1 + d2) * d3 and d1 + d2 * d3:
                 print("Good effort, but no, it is not " + str(answer) + ". A traveling witch once taught you a spell to launch your foes several feet away from you, quite useful in this moment where the monster was approaching you in a threatening manner. You quickly draw your wand and yell out the spell, but uh-oh. It seems you should have practiced more, as nothing happens, and the monster appears even more irritated at your foolish antics.")
                 print("Correct answer: " + str(d1 + d2 * d3))
+                orc_attacking()
             else:
                 print("You remember snooping through your mother's magic scrolls and finding a powerful spell that shoots lightning at your target, you quickly mutter the incantation, yet nothing happened. Oh no! You forgot to draw your wand first, like how does one even forget the order of things? (bruh imagine forgetting PEMDAS)")
                 print("Correct answer: " + str(d1 + d2 * d3))
+                orc_attacking()
 
 #--------------------- equations for DL
 def equations_DL(choice):
@@ -478,6 +499,7 @@ def equations_DL(choice):
             if answer != e1 + e2:
                 print("You try to punch your opponent, only to miss your swing and stumble, giving the monster the opportunity to attack. You just failed to do kindergarten math :/")
                 print("Correct answer: " + str(e1+e2))
+                DL_attacking()
             else:
                 print("Congratulations you can do basic math; you bring your arm back and drive it straight into the monster's gut, as it howls in pain.")
                 attacking_dungeon_lord(choice)
@@ -487,6 +509,7 @@ def equations_DL(choice):
             if answer != e1 * e2:
                 print("You pull your rusty dagger you found on the side of a street and bring it in a downward slash, but your grip on the weapon wasn't strong enough, and it slips before you can even hit your opponent. Looks like you need to work on your skills, in math and combat")
                 print("Correct answer: " + str(e1 * e2))
+                DL_attacking()
             else:
                 print("Yay you can multiply; using your blade, you swiftly drag it down the monster's back, doing a decent amount of damage.")
                 attacking_dungeon_lord(choice)
@@ -496,6 +519,7 @@ def equations_DL(choice):
             if answer != e1 - e2:
                 print("Really? :/ I hope you know the monster is probably laughing at your terrible skill. Deciding to just wing it, you bring your arms out and rush forward to push your enemy back, but the universe seems to hate you as you somehow manage to trip on nothing and fall flat on your face in front of the monster as it prepares to retaliate.")
                 print("Correct answer: " + str(e1 - e2))
+                DL_attacking()
             else:
                 print("Good to know you can at least subtract; an intrusive thought enters your head and before you know it, you have tackled the monster and pushed it back knocking it against the wall and giving it quite the concussion, if monsters can get concussions.")
                 attacking_dungeon_lord(choice)
@@ -508,6 +532,8 @@ def equations_DL(choice):
             elif answer != (e1 + e2) * e3 and e1 + e2 * e3:
                 print("Good effort, but no, it is not " + str(answer) + ". A traveling witch once taught you a spell to launch your foes several feet away from you, quite useful in this moment where the monster was approaching you in a threatening manner. You quickly draw your wand and yell out the spell, but uh-oh. It seems you should have practiced more, as nothing happens, and the monster appears even more irritated at your foolish antics.")
                 print("Correct answer: " + str(e1 + e2 * e3))
+                DL_attacking()
             else:
                 print("You remember snooping through your mother's magic scrolls and finding a powerful spell that shoots lightning at your target, you quickly mutter the incantation, yet nothing happened. Oh no! You forgot to draw your wand first, like how does one even forget the order of things? (bruh imagine forgetting PEMDAS)")
                 print("Correct answer: " + str(e1 + e2 * e3))
+                DL_attacking()
