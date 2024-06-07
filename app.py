@@ -15,9 +15,10 @@ def dead():
     if players.health <= 0:
         print("you died")
         print ("LETS START OVER >:) ")
+        
         game()
     else:
-        print (players.health)
+        print (players.health, "HP")
 
 def game():
 
@@ -88,9 +89,10 @@ def game():
     print ("your enemy has: ", shrubs.hp)
     print ("shrubs do a total damage of:", totaldmgshrub)
     def battle_with_shrub ():
-        while shrubs.hp > 0 and players.health>0:
+        while shrubs.hp>0:
             main_shrub()
-            dead()
+            if players.health<=0:
+                dead()
         print ("HURRAY! Lets keep moving before more come")
 
     battle_with_shrub()
@@ -112,9 +114,10 @@ def game():
     print("Your enemy has:", slimes.hp)
     print ("slimes deal a total damage of: ", totaldmgslime )
     def battle_with_slime ():
-        while slimes.hp>0 and players.health>0:
+        while slimes.hp>0:
             main_slime()
-            dead()
+            if players.health<=0:
+                dead()
         print ("HURRAY! Your quickly pick up your feet and quickly hurry away")
         lvl_up()
     battle_with_slime()
@@ -152,7 +155,8 @@ def game():
     def battle_with_goblin ():
         while goblins.hp>0:
             main_goblin()
-            dead()
+            if players.health<=0:
+                dead()
         lvl_up()
         print ("Lets hurry before it catches up!")
     battle_with_goblin()
@@ -175,9 +179,10 @@ def game():
     print("Your enemy has:", orcs.hp)
     print ("orcs deal a total damage of: ", totaldmgorc )
     def battle_with_orc ():
-        while orcs.hp>0 and players.health>0:
+        while orcs.hp>0:
             main_orc()
-            dead()
+            if players.health<=0:
+                dead()
         lvl_up()
         print ("The faster you defeat Dungeon Lord the faster you can leave this place")
     battle_with_orc()
@@ -209,11 +214,11 @@ def game():
     print("Your enemy has:", dungeon_lords.hp)
     print ("Dungeon Lord deal a total damage of: ", totaldmgDL )
     def battle_with_DL ():
-        f1 = dungeon_lords.hp>0
-        f2 =players.health>0
-        while f1 and f2:
+        while dungeon_lords.hp>0:
             main_DL()
-            dead()
+            if players.health<=0:
+                dead()
+
         lvl_up()
         print ("With your final attack dealt, the dungeon lord lets out one last roar before it collapses")
     battle_with_DL()

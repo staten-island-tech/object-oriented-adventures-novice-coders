@@ -7,6 +7,8 @@ def dead():
     if players.health <= 0:
         print("you died")
         print ("LETS START OVER >:) ")
+    else:
+        ("ahahha")
 
 #battle with blob
 def battle_with_blob():
@@ -38,7 +40,9 @@ def battle_with_orc ():
 def battle_with_DL ():
     while dungeon_lords.hp>0:
         main_DL()
-        dead()
+        if players.health<=0:
+            dead()
+
 
 
 
@@ -46,4 +50,4 @@ def battle_with_DL ():
 
 
 battle_with_DL()
-
+print("HAHAAH")
