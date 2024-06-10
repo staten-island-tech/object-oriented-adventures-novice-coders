@@ -86,7 +86,7 @@ def game():
     print ()
 
     #shrub battle
-    print ("your enemy has: ", shrubs.hp)
+    print ("your enemy has: ", shrubs.hp, "HP")
     print ("shrubs do a total damage of:", totaldmgshrub)
     def battle_with_shrub ():
         while shrubs.hp>0:
@@ -111,7 +111,7 @@ def game():
     print()
 
     #slime battle
-    print("Your enemy has:", slimes.hp)
+    print("Your enemy has:", slimes.hp, "HP")
     print ("slimes deal a total damage of: ", totaldmgslime )
     def battle_with_slime ():
         while slimes.hp>0:
@@ -150,7 +150,7 @@ def game():
     print()
 
     #battle with goblin
-    print("Your enemy has:", goblins.hp)
+    print("Your enemy has:", goblins.hp, "HP")
     print ("goblins deal a total damage of: ", totaldmggoblin )
     def battle_with_goblin ():
         while goblins.hp>0:
@@ -176,7 +176,7 @@ def game():
     print()
 
     #battle with orc
-    print("Your enemy has:", orcs.hp)
+    print("Your enemy has:", orcs.hp, "HP")
     print ("orcs deal a total damage of: ", totaldmgorc )
     def battle_with_orc ():
         while orcs.hp>0:
@@ -211,7 +211,7 @@ def game():
     print ()
 
     #DL fight
-    print("Your enemy has:", dungeon_lords.hp)
+    print("Your enemy has:", dungeon_lords.hp, "HP")
     print ("Dungeon Lord deal a total damage of: ", totaldmgDL )
     def battle_with_DL ():
         while dungeon_lords.hp>0:
